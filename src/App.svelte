@@ -1,10 +1,22 @@
 <script>
+  // layout
   import Navigation from "./components/layout/Navigation.svelte";
-</script>
+	import Hero from './components/layout/Hero.svelte';
+	import Services from './components/layout/Services.svelte';
+	import ContactUs from './components/layout/ContactUs.svelte';
+	import Footer from './components/layout/Footer.svelte';
 
+  import ScrollTop from "./components/ScrollTop.svelte";
+  let scroll;
+</script>
+<svelte:window bind:scrollY={scroll} />
 <main>
-  <Navigation />
-  <h1>hello</h1>
+  <Navigation {scroll}/>
+  <Hero />
+  <Services />
+  <ContactUs />
+  <Footer />
+  <ScrollTop {scroll}/>
 </main>
 
 <style>
