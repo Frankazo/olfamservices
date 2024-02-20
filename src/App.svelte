@@ -21,7 +21,7 @@
 
 <style>
   main {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     color: #000;
   }
 </style>

@@ -2,10 +2,11 @@
     export let scroll;
     let scrollTop = 0;
     let scrollState = '';
+    let burguer = false;
 
     const handleScroll = () => {
-        if (scroll > 80) {
-            scrollState = scroll > scrollTop ? 'scrolling' : 'up';
+        if (scroll > 80 && !burguer) {
+            scrollState = scroll > scrollTop ? 'scrolling' : 'scrolling up';
         } else {
             scrollState = '';
         }
@@ -15,52 +16,44 @@
 </script>
 <svelte:window on:scroll={handleScroll}/>
 
-<section class="navbarWrapper {scrollState}">
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <a class="navbar-brand heading-black" href="index.html">
-                Olfam Services
-            </a>
-            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
-                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span data-feather="grid"></span>
-            </button>
-            <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#faq">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="#">
-                            Try Generator
-                        </a>
-                    </li>
-                </ul>
-            </div> -->
-        </nav>
-    </div>
-</section>
+<header class="header {scrollState}" id="header" >
+    <nav class="navbar container">
+       <a href="#top" class="brand">Olfam Services</a>
+       <!-- svelte-ignore a11y-click-events-have-key-events -->
+       <!-- svelte-ignore a11y-no-static-element-interactions -->
+       <div class="burger" id="burger" class:active={burguer} on:click={() => burguer = !burguer}>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+       </div>
+       <div class="menu" id="menu" class:active={burguer}>
+          <ul class="menu-inner">
+             <li class="menu-item"><a href="#top" class="menu-link" on:click={() => burguer = false}>Home</a></li>
+             <li class="menu-item"><a href="#services" class="menu-link" on:click={() => burguer = false}>Services</a></li>
+             <li class="menu-item"><a href="#projects" class="menu-link" on:click={() => burguer = false}>Projects</a></li>
+             <!-- <li class="menu-item"><a href="#" class="menu-link">Contact</a></li> -->
+          </ul>
+       </div>
+       <a href="#contact" class="menu-block" on:click={() => burguer = false}>Contact</a>
+    </nav>
+ </header>
 
 <style lang="scss">
-    .navbarWrapper {
+    // Header Section
+    .header {
         position: fixed;
         top: 0;
-        z-index: 1020;
+        left: 0;
+        z-index: 100;
         width: 100%;
-        transition: all .3s ease-out;
+        height: auto;
+        margin: 0 auto;
+        transition: all 0.35s ease;
 
         &.scrolling {
             transform: translateY(-100%);
+            background: var(--color-black-300);
+            box-shadow: var(--shadow-medium);
             
             &.up {
                 background-color: rgba(0, 0, 0, 0.9);
@@ -71,142 +64,182 @@
     }
 
     .navbar {
-        position: relative;
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -ms-flex-align: center;
+        flex-direction: row;
         align-items: center;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        padding: 1.5rem 1.25rem;
-    }
-
-    .navbar {
-    
-        &.navbar-transparent {
-            opacity: 0.98;
-        }
-
-        @media (max-width: 992px) {
-            &.navbar-transparent {
-                background-color: #000;
-            }
-        }
-        
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: #1de9b6;
-            text-transform: uppercase;
-        }
-
-        .navbar-nav .nav-item {
-            margin: 0 .7rem;
-
-            .nav-link {
-                font-weight: 600;
-            }
-        }
-
-    }
-    .navbar-toggler {
-        padding: 0.25rem 0.75rem;
-        font-size: 1.25rem;
-        line-height: 1;
-        background-color: transparent;
-        border: 2px solid transparent;
-        border-radius: 0.3rem;
-    }
-
-    .navbar-dark .navbar-toggler {
-        color: rgba(255, 255, 255, 0.7);
-        border-color: rgba(255, 255, 255, 0.1);
-    }
-    .container-fluid {
+        justify-content: flex-start;
+        column-gap: 1.25rem;
         width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .navbar-brand {
-        display: inline-block;
-        padding-top: 0.0625rem;
-        padding-bottom: 0.0625rem;
-        margin-right: 1.25rem;
-        font-size: 1.25rem;
-        line-height: inherit;
-        white-space: nowrap;
+        height: 4.25rem;
+        margin: 0 auto;
     }
 
-    .navbar-collapse {
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-
-    .navbar-nav {
-        display: -ms-flexbox;
-        display: flex;
-        justify-content: flex-end;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding-left: 0;
-        margin-bottom: 0;
-        list-style: none;
-    }
-
-    .ml-auto, .mx-auto {
-        margin-left: auto !important;
-    }
-
-    .navbar.s .navbar-nav .nav-item {
-        margin: 0 0.7rem;
-    }
-
-    .navbar.s .navbar-nav .nav-item .nav-link.s {
+    .brand {
+        font-family: inherit;
+        font-size: 1.6rem;
         font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: -1px;
+        color: var(--color-white-100);
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 1.3rem;
+        }
     }
 
-    .navbar .navbar-nav .nav-item .nav-link {
-        font-weight: 600;
-    }
+    .menu {
+        position: fixed;
+        top: -300px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 4rem 0 3rem;
+        overflow: hidden;
+        background-color: var(--color-black-300);
+        box-shadow: var(--shadow-medium);
+        transition: all 0.4s ease-in-out;
 
-    .navbar-dark .navbar-nav .nav-link {
-        color: #000;
-    }
-
-    .navbar-nav .nav-link {
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    .nav-link {
-        display: block;
-        padding: 0.25rem 1rem;
-    }
-
-    @media (min-width: 768px) {
-        .navbar-expand-md {
-            -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-            -ms-flex-pack: start;
-            justify-content: flex-start;
-        }  
-
-        .navbar-expand-md .navbar-nav {
-            -ms-flex-direction: row;
-            flex-direction: row;
+        &.active {
+            top: 0;
+            width: 100%;
+            height: auto;
         }
 
-        .navbar-expand-md .navbar-nav .nav-link {
-            padding-right: 0.75rem;
-            padding-left: 0.75rem;
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 1.25rem;
+        }
+
+        &-link {
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: var(--color-white-100);
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        &-block {
+            display: inline-block;
+            font-family: inherit;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.25;
+            user-select: none;
+            white-space: nowrap;
+            text-align: center;
+            margin-left: auto;
+            padding: 0.65rem 1.5rem;
+            border-radius: 3rem;
+            text-transform: capitalize;
+            color: var(--color-white);
+            background-color: var(--color-blue-600);
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease-in-out;
+        }
+
+        // Media Query Breakpoint
+        @media only screen and (min-width: 48rem) {
+            position: relative;
+            top: 0;
+            width: auto;
+            height: auto;
+            padding: 0rem;
+            margin-left: auto;
+            background: none;
+            box-shadow: none;
+
+            &-inner {
+                display: flex;
+                flex-direction: row;
+                column-gap: 2rem;
+                margin: 0 auto;
+            }
+
+            &-link {
+                text-transform: capitalize;
+            }
+
+            &-block {
+                margin-left: 2rem;
+            }
+    }
+    }
+
+    // .navbar .navbar-nav .nav-item .nav-link {
+    //     font-weight: 600;
+    //     }
+
+    // .navbar .navbar-nav .nav-item .nav-link {
+    //     font-weight: 600;
+    // }
+
+    .burger {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        user-select: none;
+        order: -1;
+        z-index: 10;
+        width: 1.6rem;
+        height: 1.15rem;
+        border: none;
+        outline: none;
+        background: none;
+        visibility: visible;
+        transform: rotate(0deg);
+        transition: 0.35s ease;
+
+        // Media Query Breakpoint
+        @media only screen and (min-width: 48rem) {
+            display: none;
+            visibility: hidden;
+        }
+
+        &-line {
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border: none;
+            outline: none;
+            opacity: 1;
+            border-radius: 1rem;
+            transform: rotate(0deg);
+            background-color: var(--color-white-100);
+            transition: 0.25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 0px;
+            }
+            &:nth-child(2) {
+                top: 0.5rem;
+                width: 70%;
+            }
+            &:nth-child(3) {
+                top: 1rem;
+            }
+        }
+
+        &.is-active .burger-line {
+            &:nth-child(1) {
+                top: 0.5rem;
+                transform: rotate(135deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:nth-child(3) {
+                top: 0.5rem;
+                transform: rotate(-135deg);
+            }
         }
     }
 </style>
