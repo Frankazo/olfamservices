@@ -26,10 +26,10 @@
         line-height: 40px;
         right: -100px;
         color: #ffffff;
-        background-color: rgba(29, 233, 182, 0.5); 
+        background-color: var(--accent); 
 
         &:hover {
-            background-color: #1de9b6;
+            background-color: var(--accentHover);
             transition: all .4s ease-in-out; 
         }
 

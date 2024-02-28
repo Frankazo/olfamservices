@@ -137,10 +137,14 @@
             padding: 0.65rem 1.5rem;
             border-radius: 3rem;
             text-transform: capitalize;
-            color: var(--color-white);
-            background-color: var(--color-blue-600);
             box-shadow: var(--shadow-medium);
-            transition: all 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out;
+            background-color: var(--buttonColor);
+            color: #fff;
+
+                &:hover {
+                    background-color: var(--buttonHoverColor, var(--buttonColor));
+                }
         }
 
         // Media Query Breakpoint
@@ -168,16 +172,8 @@
             &-block {
                 margin-left: 2rem;
             }
+        }
     }
-    }
-
-    // .navbar .navbar-nav .nav-item .nav-link {
-    //     font-weight: 600;
-    //     }
-
-    // .navbar .navbar-nav .nav-item .nav-link {
-    //     font-weight: 600;
-    // }
 
     .burger {
         position: relative;
@@ -195,7 +191,6 @@
         transform: rotate(0deg);
         transition: 0.35s ease;
 
-        // Media Query Breakpoint
         @media only screen and (min-width: 48rem) {
             display: none;
             visibility: hidden;

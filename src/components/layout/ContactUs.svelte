@@ -237,7 +237,7 @@
 
   .my-form button:enabled:hover .back,
   .my-form button:focus .back {
-    transform: translate(-50%, -50%);
+    transform: translate(-5%, -50%);
   }
 
   .my-form button:enabled:hover .front,
@@ -257,7 +257,7 @@
     position: relative;
     display: inline-block;
     padding-left: 2rem;
-    transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+    transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
   }
 
   .my-form input[type="checkbox"] + label::before,
@@ -275,7 +275,7 @@
   }
 
   .my-form input[type="checkbox"]:checked + label::before {
-    background: #e31b23;
+    background-color: #e31b23;
   }
 
   .my-form input[type="checkbox"]:checked + label::after {
@@ -300,11 +300,6 @@
     .my-form .grid-2 {
       grid-template-columns: 1fr 1fr;
     }
-
-    // .my-form .grid-3 {
-    //   grid-template-columns: auto auto auto;
-    //   align-items: center;
-    // }
 
     .my-form .grid > *:not(:last-child) {
       margin-bottom: 0;
