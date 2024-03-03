@@ -3,6 +3,7 @@
   import Navigation from "./components/layout/Navigation.svelte";
 	import Hero from './components/layout/Hero.svelte';
 	import Services from './components/layout/Services.svelte';
+  import ServicesScroll from "./components/layout/ServicesScroll.svelte";
 	import ContactUs from './components/layout/ContactUs.svelte';
 	import Footer from './components/layout/Footer.svelte';
 
@@ -13,7 +14,8 @@
 <main>
   <Navigation {scroll}/>
   <Hero />
-  <Services />
+  <!-- <Services /> -->
+  <ServicesScroll />
   <ContactUs />
   <Footer />
   <ScrollTop {scroll}/>
