@@ -2,11 +2,12 @@
   // layout
   import Navigation from "./components/layout/Navigation.svelte";
 	import Hero from './components/layout/Hero.svelte';
+  import CopyBlock from "./components/shared/CopyBlock.svelte";
 	import Services from './components/layout/Services.svelte';
-  import ServicesScroll from "./components/layout/ServicesScroll.svelte";
 	import ContactUs from './components/layout/ContactUs.svelte';
 	import Footer from './components/layout/Footer.svelte';
 
+  // helpers
   import ScrollTop from "./components/ScrollTop.svelte";
   let scroll;
 </script>
@@ -14,8 +15,8 @@
 <main>
   <Navigation {scroll}/>
   <Hero />
-  <!-- <Services /> -->
-  <ServicesScroll />
+  <CopyBlock />
+  <Services />
   <ContactUs />
   <Footer />
   <ScrollTop {scroll}/>

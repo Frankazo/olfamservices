@@ -1,202 +1,163 @@
+<script>
+    const servicesArray = [
+        {
+            id: 'service1',
+            name: 'Framing',
+            img: 'images/framing.jpg',
+            description: 'Our framing service lays the foundation for every successful construction project. With precision and expertise, our team skillfully constructs the skeletal structure of your building, ensuring it meets the highest industry standards. From residential homes to commercial spaces, our framing services provide the sturdy framework upon which your vision is built.'
+        },
+        {
+            id: 'service2',
+            name: 'Roofing',
+            img: 'images/Roofing.jpg',
+            description: "Elevate your property's protection and aesthetics with our roofing services. Our experienced roofers specialize in installing durable and weather-resistant roofing materials. Whether it's a repair, replacement, or new installation, we prioritize quality craftsmanship to safeguard your investment against the elements while enhancing the overall curb appeal of your structure."
+        },
+        {
+            id: 'service3',
+            name: 'Wood and Metal',
+            img: 'images/wood&metal.jpg',
+            description: "Our wood and metal services bring versatility and durability to your construction project. From crafting custom woodwork to precision metal fabrication, our skilled artisans ensure that every detail aligns with your design vision. Enhance the beauty and functionality of your space with our expertly crafted wood and metal solutions, tailored to your unique needs."
+        },
+        {
+            id: 'service4',
+            name: 'Windows',
+            img: 'images/window.jpg',
+            description: "Welcome natural light and elevate your interior with our professional window installation services. We specialize in the precise fitting and installation of a wide range of window types. Our team ensures energy efficiency, security, and aesthetic appeal, transforming your space with well-crafted windows that not only complement your design but also contribute to a comfortable and inviting atmosphere."
+        },
+        {
+            id: 'service5',
+            name: 'Doors',
+            img: 'images/door.jpg',
+            description: "Make a grand entrance with our door installation services. From stylish front doors to functional interior doors, we specialize in seamless installations that enhance both security and aesthetics. Our skilled craftsmen pay meticulous attention to detail, ensuring a perfect fit for every door. Elevate the overall appeal of your property while maintaining the highest standards of quality and durability."
+        },
+    ];
+    let current = servicesArray[0];
+</script>
 
-<section class="section-services">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-md-10 col-lg-8">
-                <div class="header-section">
-                    <h2 class="title">Exclusive <span>Services</span></h2>
-                    <p class="description">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some injected humour</p>
-                </div>
-            </div>
+<section id="services" class="services">
+    <div class="services__nav">
+        <div class="mobileAssets">
+            <div class='asset' style="background-image: url({current.img})"></div>
         </div>
-        <div class="row">
-            <!-- Start Single Service -->
-            <div class="col-md-6 col-lg-4">
-                <div class="single-service">
-                    <div class="part-1">
-                        <i class="fal fa-door-closed"></i>
-                        <!-- <i class="fab fa-500px"></i> -->
-                        <h3 class="title">Express delivery innovative Design service</h3>
-                    </div>
-                    <div class="part-2">
-                        <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-                        <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- / End Single Service -->
-            <!-- Start Single Service -->
-            <div class="col-md-6 col-lg-4">
-                <div class="single-service">
-                    <div class="part-1">
-                        <i class="fab fa-angellist"></i>
-                        <h3 class="title">Online chat may refer to any kind communication</h3>
-                    </div>
-                    <div class="part-2">
-                        <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-                        <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- / End Single Service -->
-            <!-- Start Single Service -->
-            <div class="col-md-6 col-lg-4">
-                <div class="single-service">
-                    <div class="part-1">
-                        <i class="fas fa-award"></i>
-                        <h3 class="title">Service provider provide organizations consulting</h3>
-                    </div>
-                    <div class="part-2">
-                        <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-                        <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- / End Single Service -->
-            <!-- Start Single Service -->
-            <div class="col-md-6 col-lg-4">
-                <div class="single-service">
-                    <div class="part-1">
-                        <i class="fab fa-asymmetrik"></i>
-                        <h3 class="title">Express delivery innovative Design service</h3>
-                    </div>
-                    <div class="part-2">
-                        <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-                        <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- / End Single Service -->
-            <!-- Start Single Service -->
-            <div class="col-md-6 col-lg-4">
-                <div class="single-service">
-                    <div class="part-1">
-                        <i class="fas fa-broadcast-tower"></i>
-                        <h3 class="title">Provide solutions and services to end users</h3>
-                    </div>
-                    <div class="part-2">
-                        <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-                        <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- / End Single Service -->
-            <!-- Start Single Service -->
-            <div class="col-md-6 col-lg-4">
-                <div class="single-service">
-                    <div class="part-1">
-                        <i class="fab fa-canadian-maple-leaf"></i>
-                        <h3 class="title">This broad term incorporates all IT businesses</h3>
-                    </div>
-                    <div class="part-2">
-                        <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-                        <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- / End Single Service -->
+        {#each servicesArray as service}
+            <button class:current={current.id == service.id} on:click={() => current = service}>{service.name}</button>
+        {/each}
+        <div class="divider"></div>
+        <div class="description">
+           <p>{current.description}</p> 
         </div>
+    </div>
+
+    <div class="services__assets">
+        <div class='asset' style="background-image: url({current.img})"></div>
     </div>
 </section>
 
 <style lang="scss">
-a,p,h2,h3 {
-	margin: 0;
-	padding: 0;
-}
+    .services {
+        width: 100%;
+        background-color: #fff;
+        height: 100vh;
 
-.section-services {
-	padding-top: 110px;
-	padding-bottom: 120px;
-	font-family: "Poppins", sans-serif;
-	color: #fff;
-}
+        &__nav {
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            width: 50%;
+            height: 100vh;
+            min-width: 550px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 50px;
+            z-index: 10;
 
-.section-services .header-section {
-	margin-bottom: 35px;
-}
+            button {
+                color: #929292;
+                font-size: clamp(3rem, 5vw, 5rem);
+                font-weight: 600;
+                text-transform: uppercase;
+                outline: none;
+                text-align: left;
+                text-wrap: nowrap;
 
-.section-services .header-section .title {
-	position: relative;
-	margin-bottom: 40px;
-	padding-bottom: 25px;
-	text-transform: uppercase;
-	font-weight: 700;
-}
+                &.current {
+                    color: #000;
+                }
+            }
 
-.section-services .header-section .title:before {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 140px;
-	height: 1px;
-	background-color: var(--accent);
-}
+            .divider {
+                margin-top: 50px;
+            }
 
-.section-services .header-section .title:after {
-	content: "";
-	position: absolute;
-	bottom: -1px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 45px;
-	height: 3px;
-	background-color: var(--accent);
-}
+            .description {
+                p {
+                    color: #000;
+                    padding-top: 40px;
+                    font-size: 24px;
+                }
+            }
 
-.section-services .header-section .title span {
-	color: var(--accent);
-}
+            .mobileAssets {
+                display: none;
+                width: 100%;
+                height: 300px;
+                z-index: 1000;
 
-.section-services .header-section .description {
-	color: #6f6f71;
-}
+                .asset {
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                }
+            }
+        }
 
-.section-services .single-service {
-	margin-top: 40px;
-	background-color: #24252a;
-	box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
-}
+        &__assets {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
 
-.section-services .single-service .part-1 {
-	padding: 40px 40px 25px;
-	border-bottom: 2px solid #1d1e23;
-}
+            .asset {
+                background-position: center;
+                background-size: cover;
+                height: 100%;
+                width: 50%;
+                margin-left: auto;
+                -webkit-transition: background-image 0.5s;
+                transition: background-image 0.5s;
+            }
+        }
 
-.section-services .single-service .part-1 i {
-	margin-bottom: 25px;
-	font-size: 50px;
-	color: var(--accent);
-}
+        @media screen and (max-width: 767px) {
+            &__assets {
+                display: none;
+            }
 
-.section-services .single-service .part-1 .title {
-	font-size: 17px;
-	font-weight: 700;
-	letter-spacing: 0.02em;
-	line-height: 1.8em;
-}
+            &__nav {
+                width: 100%;
+                padding: 0;
+                height: auto;
+                gap: 10px;
 
-.section-services .single-service .part-2 {
-	padding: 30px 40px 40px;
-}
+                .mobileAssets {
+                    display: block;
+                }
 
-.section-services .single-service .part-2 .description {
-	margin-bottom: 22px;
-	color: #6f6f71;
-	font-size: 14px;
-	line-height: 1.8em;
-}
+                button {
+                    padding-left: 20px;
+                }
 
-.section-services .single-service .part-2 a {
-	color: #fff;
-	font-size: 14px;
-	text-decoration: none;
-}
+                .divider {
+                    margin-left: 20px;
+                }
 
-.section-services .single-service .part-2 a i {
-	margin-right: 10px;
-	color: var(--accent);
-}
+                .description {
+                    padding: 0 20px;
+                }
+
+
+            }
+        }
+    }
 </style>
