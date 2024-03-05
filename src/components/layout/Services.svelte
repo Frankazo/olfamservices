@@ -130,15 +130,20 @@
         }
 
         @media screen and (max-width: 767px) {
+            height: auto;
+
             &__assets {
                 display: none;
             }
 
             &__nav {
+                position: relative;
+                height: auto;
                 width: 100%;
                 padding: 0;
                 height: auto;
                 gap: 10px;
+                min-width: 0;
 
                 .mobileAssets {
                     display: block;
@@ -146,14 +151,19 @@
 
                 button {
                     padding-left: 20px;
+                    font-size: 1.5rem;
                 }
 
                 .divider {
                     margin-left: 20px;
+                    margin-top: 15px;
+                    height: 4px;
+                    width: 50px;
                 }
 
-                .description {
-                    padding: 0 20px;
+                .description p {
+                    padding: 20px;
+                    font-size: 16px;
                 }
 
 
