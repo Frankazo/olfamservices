@@ -2,7 +2,7 @@
 
 </script>
 
-<div class="hero">
+<div class="hero" style="background-image: url(images/hero.jpg)">
   <div class="hero-text">
     <h1>Transforming Dreams into Reality!</h1>
     <p>Request Your Quote Today and Build with Confidence!</p>
@@ -14,7 +14,6 @@
 <style lang="scss">
    .hero {
       min-height: 60vh;
-      background-image: url("images/hero.jpg");
       height: 100%;
       background-position: center;
       background-repeat: no-repeat;
