@@ -29,14 +29,13 @@
         <li>
           <select>
             <option selected disabled>Services</option>
-            <option>Framing</option>
-            <option>Trimming</option>
-            <option>Roofing</option>
-            <option>Wood and Metal</option>
-            <option>Window Installation</option>
-            <option>Doors and Sliding Doors Installations</option>
-            <option>Multiple services (please describe)</option>
-            <option>Other (please describe)</option>
+            <option value="Wood and Metal Framing">Wood and Metal Framing</option>
+            <option value="Moulding & Millwork">Moulding & Millwork</option>
+            <option value="Window">Window Installation</option>
+            <option value="Door">Doors and Sliding Doors Installations</option>
+            <option value="Demolition">Demolition</option>
+            <option value="Multiple">Multiple services (please describe)</option>
+            <option value="Other">Other (please describe)</option>
           </select>
         </li>    
         <li>
