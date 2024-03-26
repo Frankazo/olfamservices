@@ -7,7 +7,7 @@
       <div class="side front">
         <div class="img img1"></div>
         <div class="info">
-          <h2>Super S</h2>
+          <h2>Wood</h2>
           <p>A stand-on with an exceptional compact stance. Great for tight spaces and trailering.</p>
         </div>
       </div>
@@ -33,7 +33,7 @@
       <div class="side front">
         <div class="img img2"></div>
         <div class="info">
-          <h2>Super Z HyperDrive</h2>
+          <h2>Metal</h2>
           <p>A high-performance zero-turn with unsurpassed strength, speed &amp; reliability with a warranty to match.</p>
         </div>
       </div>
@@ -59,7 +59,7 @@
       <div class="side front">
         <div class="img img3"></div>
         <div class="info">
-          <h2>Vanguard Power</h2>
+          <h2>Moulding</h2>
           <p>If you need a tough, commercial grade engine that makes you more productive, look to Vanguard.</p>
         </div>
       </div>
@@ -214,13 +214,13 @@
     }
 
     .img1 {
-      background-image: url(http://i.imgur.com/1aE1nMA.jpg);
+      background-image: url(images/framing.jpg);
     }
     .img2 {
-      background-image: url(http://i.imgur.com/2p9VXAn.jpg);
+      background-image: url(images/wMframing.png);
     }
     .img3 {
-      background-image: url(http://i.imgur.com/I5ABT2v.jpg);
+      background-image: url(images/moulding.jpg);
     }
   }
 
