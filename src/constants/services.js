@@ -2,7 +2,7 @@ export const servicesArray = [
     {
         id: 'service1',
         name: 'Wood & Metal Framing',
-        img: 'images/framing.jpg',
+        img: 'images/wMframing.png',
         description: 'Our framing service lays the foundation for every successful construction project. With precision and expertise, our team skillfully constructs the skeletal structure of your building, ensuring it meets the highest industry standards. From residential homes to commercial spaces, our framing services provide the sturdy framework upon which your vision is built.'
     },
     {
@@ -35,4 +35,96 @@ export const servicesArray = [
         img: 'images/Roofing.jpg',
         description: "Prepare for a fresh start with our experienced team efficiently and safely handling the demolition process, whether it's for remodeling or new construction. Prioritizing safety and environmental considerations, we ensure a clean and organized demolition process that paves the way for your vision to take shape."
     },
+];
+
+
+export const imagesArray = [
+    {
+        img: 'exports/File-1.jpg',
+    },
+    {
+        img: 'exports/File-2.jpeg',
+    },
+    {
+        img: 'exports/File-3.jpeg',
+    },
+    {
+        img: 'exports/File-4.jpeg',
+    },
+    {
+        img: 'exports/File-5.jpeg',
+    },
+    {
+        img: 'exports/File-6.jpeg',
+    },
+    {
+        img: 'exports/File-7.jpeg',
+    },
+    {
+        img: 'exports/File-8.jpeg',
+    },
+    {
+        img: 'exports/File-9.jpeg',
+    },
+    {
+        img: 'exports/File-10.jpeg',
+    },
+    {
+        img: 'exports/File-11.jpeg',
+    },
+    {
+        img: 'exports/File-12.jpeg',
+    },
+    {
+        img: 'exports/File-13.jpeg',
+    },
+    {
+        img: 'exports/File-14.jpeg',
+    },
+    {
+        img: 'exports/File-15.jpeg',
+    },
+    {
+        img: 'exports/File-16.jpeg',
+    },
+    {
+        img: 'exports/File-17.jpeg',
+    },
+    {
+        img: 'exports/File-18.jpeg',
+    },
+    {
+        img: 'exports/File-19.jpeg',
+    },
+    {
+        img: 'exports/File-20.jpeg',
+    },
+    {
+        img: 'exports/File-21.jpeg',
+    },
+    {
+        img: 'exports/File-22.jpeg',
+    },
+    {
+        img: 'exports/File-23.jpeg',
+    },
+    {
+        img: 'exports/File-24.jpeg',
+    },
+    {
+        img: 'exports/File-25.jpeg',
+    },
+    {
+        img: 'exports/File-26.jpeg',
+    },
+    {
+        img: 'exports/File-27.jpeg',
+    },
+    {
+        img: 'exports/File-28.jpeg',
+    },
+    {
+        img: 'exports/File-29.jpeg',
+    }
+
 ];

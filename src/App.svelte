@@ -3,7 +3,9 @@
   import Navigation from "./components/layout/Navigation.svelte";
 	import Hero from './components/layout/Hero.svelte';
   import CopyBlock from "./components/shared/CopyBlock.svelte";
+  import Featured from "./components/layout/Featured.svelte";
 	import Services from './components/layout/Services.svelte';
+  import ImageCarousel from "./components/layout/ImageCarousel.svelte";
 	import ContactUs from './components/layout/ContactUs.svelte';
 	import Footer from './components/layout/Footer.svelte';
 
@@ -16,7 +18,9 @@
   <Navigation {scroll}/>
   <Hero />
   <CopyBlock />
+  <Featured />
   <Services />
+  <ImageCarousel />
   <ContactUs />
   <Footer />
   <ScrollTop {scroll}/>
