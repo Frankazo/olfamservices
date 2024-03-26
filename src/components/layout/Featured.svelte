@@ -5,7 +5,7 @@
   <div class="cardContainer inactive">
     <button class="cardd" class:active={current == 'first'} on:click={() => current = current == 'first' ? '' : 'first'}>
       <div class="side front">
-        <div class="img img1"></div>
+        <div class="img img1" style="background-image: url(images/framing.jpg)"></div>
         <div class="info">
           <h2>Wood</h2>
           <p>A stand-on with an exceptional compact stance. Great for tight spaces and trailering.</p>
@@ -31,7 +31,7 @@
   <div class="cardContainer inactive">
     <button class="cardd" class:active={current == 'second'} on:click={() => current = current == 'second' ? '' : 'second'}>
       <div class="side front">
-        <div class="img img2"></div>
+        <div class="img img2" style="background-image: url(images/wMframing.png)"></div>
         <div class="info">
           <h2>Metal</h2>
           <p>A high-performance zero-turn with unsurpassed strength, speed &amp; reliability with a warranty to match.</p>
@@ -57,7 +57,7 @@
   <div class="cardContainer inactive">
     <button class="cardd" class:active={current == 'third'} on:click={() => current = current == 'third' ? '' : 'third'}>
       <div class="side front">
-        <div class="img img3"></div>
+        <div class="img img3" style="background-image: url(images/moulding.jpg)"></div>
         <div class="info">
           <h2>Moulding</h2>
           <p>If you need a tough, commercial grade engine that makes you more productive, look to Vanguard.</p>
@@ -211,16 +211,6 @@
       border-radius: 5px 5px 0 0;
       width: 100%;
       height: 60%;
-    }
-
-    .img1 {
-      background-image: url(images/framing.jpg);
-    }
-    .img2 {
-      background-image: url(images/wMframing.png);
-    }
-    .img3 {
-      background-image: url(images/moulding.jpg);
     }
   }
 
