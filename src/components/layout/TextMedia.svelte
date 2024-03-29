@@ -47,7 +47,7 @@
 
             .h2 {
                 margin-bottom: 100px;
-                font-size: clamp(2rem, 5vw, 5rem);
+                font-size: clamp(2rem, 5vw, 4.5rem);
                 font-weight: 600;
                 letter-spacing: -3px;
             }

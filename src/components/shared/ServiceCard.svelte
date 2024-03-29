@@ -35,8 +35,8 @@
             }
 
             p {
-                font-size: clamp(1.2rem, 3.5vw, 1.875rem);
-                line-height: 28px;
+                font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+                line-height: 30px;
             }
 
             a {
