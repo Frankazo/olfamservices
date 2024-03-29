@@ -298,3 +298,42 @@ video {
    margin: 0;
    width: 70px;
 }
+
+.button {
+   $border-size: 2px;
+   background-color: #00000088;
+   color: #fff;
+   cursor: pointer;
+   font-size: clamp(1.2rem, 3.0488rem + -1.7073vw, 1rem);
+   font-weight: 500;
+   padding: 0.9em 2em;
+   transition: background-color 0.3s, color 0.3s;
+   text-decoration: none;
+   
+   &:hover {
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+   }
+
+   &--white {
+       background-color: transparent;
+       color: #fff;
+       border: $border-size solid #fff;
+       &:hover {
+           background-color: #fff;
+           color: #000;
+       }
+   }
+}
+
+
+
+.overlay {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: rgba(0, 0, 0, 0.3);
+}

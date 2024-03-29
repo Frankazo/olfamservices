@@ -14,7 +14,7 @@
         padding-top: 110px;
         padding-bottom: 120px;
         font-family: "Poppins", sans-serif;
-        color: #fff;
+        color: #000;
     }
 
     .header-section {

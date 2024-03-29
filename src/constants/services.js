@@ -14,7 +14,7 @@ export const servicesArray = [
     {
         id: 'service3',
         name: 'Flooring ',
-        img: 'exports/IMG_5452.jpg',
+        img: 'images/flooring.jpg',
         description: "Welcome natural light and elevate your interior with our professional window installation services. We specialize in the precise fitting and installation of a wide range of window types. Our team ensures energy efficiency, security, and aesthetic appeal, transforming your space with well-crafted windows that not only complement your design but also contribute to a comfortable and inviting atmosphere."
     },
     {
@@ -26,7 +26,7 @@ export const servicesArray = [
     {
         id: 'service5',
         name: 'Doors',
-        img: 'exports/IMG_5599.jpg',
+        img: 'exports/File-30.jpg',
         description: "Make a grand entrance with our door installation services. From stylish front doors to functional interior doors, we specialize in seamless installations that enhance both security and aesthetics. Our skilled craftsmen pay meticulous attention to detail, ensuring a perfect fit for every door. Elevate the overall appeal of your property while maintaining the highest standards of quality and durability."
     },
     {

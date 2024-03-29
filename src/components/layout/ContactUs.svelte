@@ -68,7 +68,7 @@
 
 <style lang="scss">
   form {
-    margin: 100px 0;
+    padding: 200px 0;
   }
 
   a {
@@ -112,19 +112,18 @@
 
   ul {
     list-style: none;
+    width: 100%;
   }
 
-  // body {
-  //   font: 18px/1.5 "Open Sans", sans-serif;
-  //   background: #292a2b;
-  //   color: #afafaf;
-  //   margin: 1.5rem 0;
-  // }
-
   .container {
-    max-width: 800px;
     margin: 0 auto;
     padding: 0 1.5rem;
+
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    gap: 50px;
+    align-items: baseline;
   }
 
 
@@ -133,6 +132,9 @@
   .my-form h1 {
     margin-bottom: 1.5rem;
     color: #afafaf;
+    max-width: 400px;
+    color: #000;
+    font-size: 3rem;
   }
 
   .my-form li,
@@ -289,6 +291,21 @@
 
   /* MQ
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+  @media screen and (max-width: 767px) {
+    form {
+      padding: 100px 0;
+
+      .container {
+        flex-direction: column;
+      }
+
+      h1 {
+        line-height: 40px;
+      }
+    }
+  }
   @media screen and (min-width: 600px) {
     .my-form .grid {
       display: grid;

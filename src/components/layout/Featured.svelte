@@ -84,7 +84,7 @@
 <style lang="scss">
   h2, h4 {
     text-transform: uppercase;
-    color: hsla(0, 0%, 20%, 1);
+    color: #000;
   }
 
   h2 {
@@ -96,7 +96,7 @@
 
   p, li {
     font-weight: 400;
-    color: #555;
+    color: #000;
     line-height: 22px;
   }
 

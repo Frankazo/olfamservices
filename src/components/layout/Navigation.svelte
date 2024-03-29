@@ -49,6 +49,8 @@
         height: auto;
         margin: 0 auto;
         transition: all 0.35s ease;
+        background-color: rgba(0, 0, 0, 0.9);
+        // background: var(--color-black-300);
 
         &.scrolling {
             transform: translateY(-100%);

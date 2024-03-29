@@ -1,19 +1,23 @@
 <script>
-
+   import LogoFinal from "../../assets/LogoFinal.svelte";
 </script>
 
 <div class="hero" style="background-image: url(images/hero.jpg)">
   <div class="hero-text">
-    <h1>Transforming Dreams into Reality!</h1>
-    <p>Request Your Quote Today and Build with Confidence!</p>
-    <a href="#contact">Request a Quote</a>
+      <div class="logo"><LogoFinal /></div>
+      <h1>Transforming Dreams into Reality!</h1>
+      <p>Request Your Quote Today and Build with Confidence!</p>
+      <div class="cta">
+         <a href="#services" class="button">Our Services</a>
+         <a href="#contact" class="button button--white ">Request a Quote</a>
+      </div>
   </div>
   <div class="overlay"></div>
 </div>
 
 <style lang="scss">
    .hero {
-      min-height: 60vh;
+      min-height: 100vh;
       height: 100%;
       background-position: center;
       background-repeat: no-repeat;
@@ -33,6 +37,11 @@
          margin: auto;
          z-index: 10;
 
+         .logo {
+            width: 250px;
+            height: 280px;
+         }
+
          h1 {
             font-weight: bold;
             font-style: italic;
@@ -42,37 +51,26 @@
          p {
             font-size: clamp(0.8rem, 3vw, 1.3rem);
          }
+
+         .cta {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+         }
       }
 
-      .hero-text a {
-         display: inline-block;
-         font-family: inherit;
-         font-size: 1rem;
-         font-weight: 500;
-         line-height: 1.25;
-         user-select: none;
-         white-space: nowrap;
-         text-align: center;
-         padding: 15px 60px;
-         border-radius: 3rem;
-         text-transform: capitalize;
-         box-shadow: var(--shadow-medium);
-         transition: background-color 0.3s ease-in-out;
-         background-color: #00000088;
-         color: #fff;
-         margin-top: 50px;
+      @media screen and (max-width: 767px) {
 
-            &:hover {
-               background-color: #000;
+         .hero-text {
+            .logo {
+               width: 150px;
             }
-      }
-      .overlay {
-         position: absolute;
-         top: 0;
-         bottom: 0;
-         left: 0;
-         right: 0;
-         background: rgba(0, 0, 0, 0.3);
+
+
+            .cta {
+               flex-direction: column;
+            }
+         }
       }
    }
 </style>
