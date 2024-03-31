@@ -4,7 +4,8 @@
 </script>
 
 <div class="serviceCard">
-    <div class="serviceCard__image" style="background-image: url({service.img});"></div>
+    <a href="?id={service.id}#service">
+    <div class="serviceCard__image" style="background-image: url({service.img});"></div></a>
     <div class="serviceCard__copy">
         <h3>{service.name}</h3>
         <p>{truncatedDescription}...</p>

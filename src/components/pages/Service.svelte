@@ -11,8 +11,6 @@
         const serviceId = urlParams.get('id');
         currentService = servicesArray.find(service => service.id == serviceId);
     });
-
-    $: console.log(currentService);
 </script>
 
 {#if currentService}
