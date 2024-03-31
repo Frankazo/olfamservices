@@ -5,6 +5,10 @@
 
   // pages
   import Home from "./components/pages/Home.svelte";
+  import About from "./components/pages/About.svelte";
+  import Services from "./components/pages/Services.svelte";
+  import Projects from "./components/pages/Projects.svelte";
+  import Service from "./components/pages/Service.svelte";
   import Contact from "./components/pages/Contact.svelte"
 
   // helpers
@@ -14,6 +18,10 @@
   // Routing
   const routingMap = {
     '#home': Home,
+    '#about': About,
+    '#services': Services,
+    '#projects': Projects,
+    '#service': Service,
     '#contact': Contact,
   };
 

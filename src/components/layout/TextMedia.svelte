@@ -5,7 +5,7 @@
         
         <div class="text-media__content">
             <div class="h2">OLFAM Services: Your Best Construction Partner in the South of Florida!</div>
-            <p>Founded by 2 visionary engineers, Francisco and xxxxx, with a passion for building Florida's future."</p>
+            <p>Founded by 2 visionary engineers, Francisco Ortega and José Medina, with a passion for building Florida's future."</p>
 
             <div class="ctaBtn"><a class="button" href="#about">About OLFAM</a></div>
         </div>

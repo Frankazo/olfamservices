@@ -4,7 +4,7 @@
 </script>
 
 
-<section id="services" class="services">
+<section class="services">
     <div class="services__container">
         <div class="services__content">
             <div class="h2">The all-in-one solution for civil projects</div>
@@ -43,7 +43,7 @@
 
             .h2 {
                 max-width: 900px;
-                font-size: clamp(2.5rem, 5vw, 5rem);
+                // font-size: clamp(2.5rem, 5vw, 5rem);
                 font-weight: 600;
                 letter-spacing: -3px;
             }

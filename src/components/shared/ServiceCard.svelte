@@ -1,13 +1,14 @@
 <script>
     export let service;
+    let truncatedDescription = service.description.substring(0,100);
 </script>
 
 <div class="serviceCard">
     <div class="serviceCard__image" style="background-image: url({service.img});"></div>
     <div class="serviceCard__copy">
         <h3>{service.name}</h3>
-        <p>{service.description}</p>
-        <a href="#home">Learn More</a>
+        <p>{truncatedDescription}...</p>
+        <a href="?id={service.id}#service">Learn More</a>
     </div>
 
 </div>

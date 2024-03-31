@@ -45,7 +45,6 @@
          h1 {
             font-weight: bold;
             font-style: italic;
-            font-size: clamp(2rem, 3vw, 3rem);
          }
 
          p {

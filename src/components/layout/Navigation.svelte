@@ -29,9 +29,9 @@
        <div class="menu" id="menu" class:active={burguer}>
           <ul class="menu-inner">
              <li class="menu-item"><a href="#top" class="menu-link" on:click={() => burguer = false}>Home</a></li>
+             <li class="menu-item"><a href="#about" class="menu-link" on:click={() => burguer = false}>About</a></li>
              <li class="menu-item"><a href="#services" class="menu-link" on:click={() => burguer = false}>Services</a></li>
-             <!-- <li class="menu-item"><a href="#projects" class="menu-link" on:click={() => burguer = false}>Projects</a></li> -->
-             <!-- <li class="menu-item"><a href="#" class="menu-link">Contact</a></li> -->
+             <li class="menu-item"><a href="#projects" class="menu-link" on:click={() => burguer = false}>Projects</a></li>
           </ul>
        </div>
        <a href="#contact" class="menu-block" on:click={() => burguer = false}>Contact</a>
@@ -50,7 +50,6 @@
         margin: 0 auto;
         transition: all 0.35s ease;
         background-color: rgba(0, 0, 0, 0.9);
-        // background: var(--color-black-300);
 
         &.scrolling {
             transform: translateY(-100%);
@@ -149,7 +148,6 @@
                 }
         }
 
-        // Media Query Breakpoint
         @media only screen and (min-width: 48rem) {
             position: relative;
             top: 0;

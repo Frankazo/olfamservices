@@ -8,12 +8,24 @@
       <ul>
         <li>
           <select>
-            <option selected disabled>-- Please choose an option --</option>
+            <option selected disabled>Please choose an option:</option>
             <option>Request Quote</option>
             <option>Question about services</option>
             <option>Other</option>
           </select>
         </li>
+        <li>
+          <select>
+            <option selected disabled>Selects Services:</option>
+            <option value="Wood and Metal Framing">Wood and Metal Framing</option>
+            <option value="Moulding & Millwork">Moulding & Millwork</option>
+            <option value="Window">Window Installation</option>
+            <option value="Door">Doors and Sliding Doors Installations</option>
+            <option value="Demolition">Demolition</option>
+            <option value="Multiple">Multiple services (please describe)</option>
+            <option value="Other">Other (please describe)</option>
+          </select>
+        </li> 
         <li>
           <div class="grid grid-2">
             <input type="text" placeholder="Name" required>
@@ -25,19 +37,7 @@
             <input type="email" placeholder="Email" required>  
             <input type="address" placeholder="Address">
           </div>
-        </li>
-        <li>
-          <select>
-            <option selected disabled>Services</option>
-            <option value="Wood and Metal Framing">Wood and Metal Framing</option>
-            <option value="Moulding & Millwork">Moulding & Millwork</option>
-            <option value="Window">Window Installation</option>
-            <option value="Door">Doors and Sliding Doors Installations</option>
-            <option value="Demolition">Demolition</option>
-            <option value="Multiple">Multiple services (please describe)</option>
-            <option value="Other">Other (please describe)</option>
-          </select>
-        </li>    
+        </li>   
         <li>
           <textarea placeholder="Message"></textarea>
         </li>   
