@@ -13,6 +13,30 @@
   </head>
   <body>
     <div id="app"></div>
+
+    <form name="contact" class="my-form" id="contact" netlify netlify-honeypot="bot-field" hidden>
+      <select name="interest">
+        <option selected disabled>Please choose an option:</option>
+        <option>Request Quote</option>
+        <option>Question about services</option>
+        <option>Other</option>
+      </select>
+      <select name="service">
+        <option selected disabled>Selects Services:</option>
+        <option value="Wood and Metal Framing">Wood and Metal Framing</option>
+        <option value="Moulding & Millwork">Moulding & Millwork</option>
+        <option value="Window">Window Installation</option>
+        <option value="Door">Doors and Sliding Doors Installations</option>
+        <option value="Demolition">Demolition</option>
+        <option value="Multiple">Multiple services (please describe)</option>
+        <option value="Other">Other (please describe)</option>
+      </select>
+      <input type="text" name="name">
+      <input type="tel" name="phone">
+      <input type="email" name="email" >  
+      <input type="address" name="address">
+      <textarea name="message"></textarea>
+    </form>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

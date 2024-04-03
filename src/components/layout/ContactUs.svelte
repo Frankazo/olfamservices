@@ -1,13 +1,29 @@
 <script>
+  // let form;
   let checked = false;
+
+  // const handleSubmit = (event) => {
+  //   const myForm = event.target;
+  //   const formData = new FormData(myForm);
+    
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     // @ts-ignore
+  //     body: new URLSearchParams(formData).toString(),
+  //   })
+  //     .then(() => console.log("Form successfully submitted"))
+  //     .catch((error) => alert(error));
+  // };
 </script>
 
-<form class="my-form" id="contact" method="POST" data-netlify="true"> 
+<form class="my-form" id="contact" method="POST"> 
+    <input type="hidden" name="form-name" value="contact" />
     <div class="container">
       <h1>Request a Quote or Get in touch!</h1>
       <ul>
         <li>
-          <select>
+          <select name="interest">
             <option selected disabled>Please choose an option:</option>
             <option>Request Quote</option>
             <option>Question about services</option>
@@ -15,7 +31,7 @@
           </select>
         </li>
         <li>
-          <select>
+          <select name="service">
             <option selected disabled>Selects Services:</option>
             <option value="Wood and Metal Framing">Wood and Metal Framing</option>
             <option value="Moulding & Millwork">Moulding & Millwork</option>
@@ -28,18 +44,18 @@
         </li> 
         <li>
           <div class="grid grid-2">
-            <input type="text" placeholder="Name" required>
-            <input type="tel" placeholder="Phone">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="tel" name="phone" placeholder="Phone">
           </div>
         </li>
         <li>
           <div class="grid grid-2">
-            <input type="email" placeholder="Email" required>  
-            <input type="address" placeholder="Address">
+            <input type="email" name="email" placeholder="Email" required>  
+            <input type="address" name="address" placeholder="Address">
           </div>
         </li>   
         <li>
-          <textarea placeholder="Message"></textarea>
+          <textarea placeholder="Message" name="message"></textarea>
         </li>   
         <li>
           <input type="checkbox" id="terms" bind:checked={checked}>
