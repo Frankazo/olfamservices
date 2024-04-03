@@ -2,7 +2,7 @@
   let checked = false;
 </script>
 
-<form class="my-form" id="contact"> 
+<form class="my-form" id="contact" method="POST" data-netlify="true"> 
     <div class="container">
       <h1>Request a Quote or Get in touch!</h1>
       <ul>

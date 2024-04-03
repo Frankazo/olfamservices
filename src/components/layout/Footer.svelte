@@ -8,7 +8,7 @@
                     <div class="single-cta">
                         <div class="cta-text">
                             <h4>Find us</h4>
-                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                            <span>Address Coming Soon</span>
                         </div>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
                     <div class="single-cta">
                         <div class="cta-text">
                             <h4>Call us</h4>
-                            <span>9876543210 0</span>
+                            <span>Number Coming Soon</span>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                     <div class="single-cta">
                         <div class="cta-text">
                             <h4>Mail us</h4>
-                            <span>mail@info.com</span>
+                            <a href="mailto:olfamservices@gmail.com" target="_blank">olfamservices@gmail.com</a>  
                         </div>
                     </div>
                 </div>
@@ -43,6 +43,9 @@
                     <div class="footer-menu">
                         <ul>
                             <li><a href="#top">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <!-- <li><a href="#projects">Projects</a></li> -->
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>

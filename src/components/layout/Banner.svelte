@@ -1,5 +1,5 @@
 <section class="banner">
-    <div class="banner__slide" style="background-image: url(exports/File-26.jpeg)">
+    <div class="banner__slide" style="background-image: url(images/services/framing/023.jpeg)">
         <div class="banner__slide__content wrapper">
             <h2 class="h2">Connect Now for a Constructive Tomorrow.</h2>
 

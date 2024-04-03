@@ -16,12 +16,13 @@
 {#if currentService}
     <div class="service">
         <div class="service__content">
-            <div class="service__header">
+            <div class="service__header" style="background-image: url({currentService.img})">
                 <h1>{currentService.name}</h1>
                 <p>Request Your Quote Today and Build with Confidence!</p>
                 <div class="cta">
                     <a href="#contact" class="button">Request a Quote</a>
                 </div>
+                <div class="overlay"></div>
             </div>
 
             <div class="service__description">
@@ -53,6 +54,8 @@
 
 
         &__header {
+            background-size: cover;
+            background-position: center;
             max-width: 1600px;
             width: 100%;
             height: 50vh;
@@ -61,23 +64,26 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #000;
+            color: #fff;
             margin: auto;
             z-index: 10;
 
             h1 {
                 font-weight: bold;
                 font-style: italic;
+                z-index: 2;
             }
 
             p {
                 font-size: clamp(0.8rem, 3vw, 1.3rem);
+                z-index: 2;
             }
 
             .cta {
                 display: flex;
                 gap: 20px;
                 margin-top: 50px;
+                z-index: 2;
             }
         }
 
