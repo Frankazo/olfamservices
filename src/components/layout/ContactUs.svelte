@@ -25,9 +25,9 @@
         <li>
           <select name="interest">
             <option selected disabled>Please choose an option:</option>
-            <option>Request Quote</option>
-            <option>Question about services</option>
-            <option>Other</option>
+            <option value="Request Quote">Request Quote</option>
+            <option value="Question">Question about services</option>
+            <option value="Other">Other</option>
           </select>
         </li>
         <li>
